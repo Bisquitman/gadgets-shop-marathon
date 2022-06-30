@@ -20,7 +20,7 @@ const devtool = devMode ? 'source-map' : undefined;
     },
     entry: ["@babel/polyfill", path.resolve(__dirname, 'src', 'index.js')],
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'public'),
       clean: true,
       filename: 'js/index.[contenthash].js',
       assetModuleFilename: "assets/[name][ext]",

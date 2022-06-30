@@ -7,7 +7,7 @@
     "start": "webpack serve",
     "build-dev": "webpack",
     "build-prod": "webpack --node-env=production",
-    "clean": "rd /s /q dist"
+    "clean": "rd /s /q public"
   },
   "keywords": [],
   "author": "",
