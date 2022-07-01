@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(22 / 16);
+
+  &__list {
+    display: flex;
+    gap: 36px;
+  }
+
+  &__link {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 36px;
+    height: 36px;
+    line-height: 1;
+    padding: 8px;
+    border: 2px solid transparent;
+    &_active {
+      border-color: $color-main;
+      border-radius: 2px;
+      //outline-offset: 8px;
+    }
+  }
+}

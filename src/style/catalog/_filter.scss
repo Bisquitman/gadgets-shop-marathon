@@ -1,0 +1,76 @@
+.filter {
+  position: relative;
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(32 / 26);
+    margin-bottom: 30px;
+  }
+
+  &__fields-list {
+    margin-bottom: 40px;
+  }
+
+  &__field {
+    margin-bottom: 30px;
+  }
+
+  &__field-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    margin-bottom: 10px;
+  }
+
+  &__flex {
+    display: flex;
+    gap: 10px;
+
+    &_column {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    width: 165px;
+    padding: 9px 10px;
+
+    &_select {
+      width: 100%;
+      color: $color-grey;
+    }
+
+    &::placeholder {
+      color: $color-grey;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: calc(20 / 16);
+    }
+  }
+
+  &__checkbox {
+    margin-right: 10px;
+  }
+
+  &__apply {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    color: $color-secondary;
+    background-color: $color-primary;
+    padding: 8px 20px;
+  }
+
+  &__reset {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    color: $color-grey;
+    background-color: transparent;
+    border: none;
+  }
+}

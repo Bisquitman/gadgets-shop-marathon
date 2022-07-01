@@ -12,10 +12,12 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  background-color: $bg-color;
-  color: $text-color;
+  background-color: $color-secondary;
+  color: $color-primary;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
 }
 
 
@@ -34,6 +36,11 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $color-main;
+  }
 }
 
 ul {
@@ -45,10 +52,16 @@ ul {
 h1,
 h2,
 h3,
+h4,
 p,
-figure,
-fieldset {
+figure{
   margin: 0;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 iframe {
@@ -75,9 +88,14 @@ iframe {
 
 .container {
   $side-padding: 30px;
-  max-width: (1920px + $side-padding * 2);
+  max-width: (1820px + $side-padding * 2);
   padding: 0 $side-padding;
   margin: 0 auto;
+}
+
+.main {
+  padding-top: 44px;
+  padding-bottom: 120px;
 }
 
 /*
