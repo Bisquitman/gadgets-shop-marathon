@@ -1,11 +1,15 @@
 .filter {
-  position: relative;
+  padding-top: 78px;
 
   &__title {
     font-weight: 700;
     font-size: 26px;
     line-height: calc(32 / 26);
     margin-bottom: 30px;
+  }
+
+  &__form {
+    position: relative;
   }
 
   &__fields-list {
@@ -29,12 +33,17 @@
 
     &_column {
       flex-direction: column;
+      font-size: 16px;
+      line-height: calc(20 / 16);
     }
   }
 
   &__input {
     width: 165px;
-    padding: 9px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid $color-primary;
+    height: 38px;
 
     &_select {
       width: 100%;
@@ -54,12 +63,26 @@
   }
 
   &__apply {
+    display: block;
+    margin: 0 auto;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(20 / 16);
     color: $color-secondary;
     background-color: $color-primary;
     padding: 8px 20px;
+    border: none;
+    transition: background-color, 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-main;
+    }
+    &:active {
+      background-color: $color-main-sub;
+    }
+    &:disabled {
+      background-color: $color-grey-light;
+    }
   }
 
   &__reset {

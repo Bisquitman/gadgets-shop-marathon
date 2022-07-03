@@ -3,6 +3,19 @@ import './card.html';
 import './cart.html';
 import './index.scss';
 
+import {pagination} from "./modules/pagination";
+
+const paginationWrapper = document.querySelector('.pagination');
+const pageUrl = new URL(location);
+const page = +pageUrl.searchParams.get('page') || 1;
+
+try {
+  pagination(paginationWrapper, 20, page, 6);
+} catch (err) {
+  console.warn(err)
+  console.warn('Это не главная страница. Тут нет пагинации.')
+}
+
 // import Swiper JS
 import Swiper, { Thumbs, Scrollbar, Pagination } from 'swiper';
 // import Swiper styles

@@ -1,0 +1,158 @@
+.card {
+  //margin-bottom: 70px;
+
+  &__details {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  &__gallery {
+    max-width: 710px;
+  }
+
+  &__info {
+    flex-basis: 100%;
+    padding-top: 120px;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+  }
+
+  &__slider-thumb {
+    max-width: 447px;
+  }
+
+  &__thumb-btn {
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border: none;
+
+    &_active {
+      outline: 2px solid $color-main;
+      outline-offset: -3px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: calc(54 / 44);
+    margin-bottom: 20px;
+  }
+
+  &__vendor-code {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    margin-bottom: 63px;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    max-width: 826px;
+  }
+
+  &__count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 120px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 30px;
+    margin-right: 80px;
+  }
+
+  &__btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid $color-primary;
+    outline: none;
+    background-color: transparent;
+    line-height: 1;
+    transition: color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &:focus {
+      border-color: $color-main-dark;
+    }
+
+    &:active {
+      border-color: $color-main;
+    }
+  }
+
+  &__quantity {
+    line-height: calc(37 / 30);
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 41px;
+    margin-right: auto;
+  }
+
+  &__add-cart {
+    width: 352px;
+    height: 57px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    color: $color-secondary;
+    background-color: $color-main;
+    border: 1px solid transparent;
+    outline: none;
+    transition: background-color 0.23s ease-in-out, border-color 0.23s ease-in-out;
+
+    &:hover {
+      background-color: $color-main-sub;
+    }
+
+    &:active, &:focus {
+      background-color: $color-main;
+      border-color: $color-main-dark;
+    }
+  }
+
+  &__params-list {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  &__params-item {
+    display: grid;
+    grid-template-columns: 210px 210px;
+    gap: 100px;
+  }
+
+  &__description {
+    max-width: 1450px;
+  }
+
+  &__description-title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(32/26);
+    margin-bottom: 20px;
+  }
+
+  &__description-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
