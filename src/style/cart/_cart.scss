@@ -1,7 +1,8 @@
 .cart {
   &__wrapper {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: minmax(990px, 3fr) minmax(710px, 2fr);
+    //grid-template-columns: 3fr 2fr;
     justify-content: space-between;
     gap: 70px 30px;
   }
