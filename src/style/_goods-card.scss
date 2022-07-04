@@ -46,5 +46,15 @@
       background-color: $color-main;
       border-color: $color-main;
     }
+
+    &:active, &:focus {
+      background-color: $color-main-sub;
+      border-color: $color-main-sub;
+    }
+
+    &:disabled {
+      background-color: $color-grey-light;
+      border-color: $color-grey-light;
+    }
   }
 }

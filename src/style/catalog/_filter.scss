@@ -95,5 +95,10 @@
     color: $color-grey;
     background-color: transparent;
     border: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $color-main;
+    }
   }
 }
