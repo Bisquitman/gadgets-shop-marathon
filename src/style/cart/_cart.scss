@@ -1,16 +1,19 @@
 .cart {
   &__wrapper {
     display: grid;
-    grid-template-columns: minmax(990px, 3fr) minmax(710px, 2fr);
+    //grid-template-columns: minmax(990px, 3fr) minmax(710px, 2fr);
+    grid-template-columns: 3fr 2fr;
     justify-content: space-between;
     gap: 70px 30px;
 
     @include desktop {
-      grid-template-columns: minmax(850px, 2.5fr) minmax(490px, 1.5fr);
+      //grid-template-columns: minmax(848px, 2.5fr) minmax(494px, 1.5fr);
+      grid-template-columns: minmax(51%, 848px) minmax(34%, 494px);
     }
 
     @include laptop {
       grid-template-columns: 1fr;
+      row-gap: 50px;
     }
   }
 
@@ -20,8 +23,12 @@
     line-height: calc(54 / 44);
     margin-bottom: 40px;
 
+    @include tablet {
+      margin-bottom: 30px;
+    }
     @include mobile {
       font-size: 30px;
+      margin-bottom: 20px;
     }
   }
 
@@ -33,7 +40,7 @@
     padding: 0;
 
     @include laptop {
-      order: 2;
+      order: 1;
     }
   }
 }

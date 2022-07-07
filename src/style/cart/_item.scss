@@ -2,6 +2,14 @@
   display: flex;
   align-items: flex-start;
 
+  @include mobile {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 18px 16px;
+  }
+
   &__img {
     width: 200px;
     height: 200px;
@@ -10,12 +18,15 @@
 
     @include desktop {
       width: 137px;
-      height: 137px;
+      height: auto;
       margin-right: 8px;
     }
     @include tablet {
       width: 103px;
-      height: 103px;
+    }
+
+    @include mobile {
+      margin-right: 0;
     }
   }
 
@@ -32,9 +43,13 @@
     }
 
     @include tablet {
-      flex-basis: 167px;
+      flex-basis: 160px;
       padding-top: 0;
-      margin-right: 10px;
+      margin-right: 7px;
+    }
+
+    @include mobile {
+      margin-right: 0;
     }
   }
 
@@ -45,10 +60,14 @@
     min-height: 54px;
     margin-bottom: 14px;
 
+    @include desktop {
+      min-height: auto;
+    }
+
     @include tablet {
       font-size: 16px;
       line-height: calc(20 / 16);
-      min-height: 40px;
+      margin-bottom: 12px;
     }
   }
 
@@ -69,11 +88,19 @@
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
+    gap: 10px;
+
+    @include mobile {
+      justify-content: flex-start;
+      gap: 30px;
+    }
   }
 
   &__count {
+    max-width: 120px;
     margin-right: 10px;
-    flex-shrink: 0;
+    gap: 10px;
+    //flex-shrink: 0;
   }
 
   &__price {
@@ -82,6 +109,7 @@
     line-height: calc(27 / 22);
     flex-shrink: 0;
     margin-right: 10px;
+    white-space: nowrap;
   }
 
   &__remove {
@@ -89,8 +117,8 @@
     height: 32px;
     border: none;
     background-color: transparent;
-    color: $color-grey-light;
     flex-shrink: 0;
+    color: $color-grey-light;
     transition: color 0.23s;
 
     &:hover {
@@ -99,6 +127,14 @@
 
     &:active {
       color: $color-main-sub;
+    }
+
+    @include mobile {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 2px;
+      right: 0;
     }
   }
 }
