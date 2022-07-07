@@ -2,9 +2,16 @@
   &__wrapper {
     display: grid;
     grid-template-columns: minmax(990px, 3fr) minmax(710px, 2fr);
-    //grid-template-columns: 3fr 2fr;
     justify-content: space-between;
     gap: 70px 30px;
+
+    @include desktop {
+      grid-template-columns: minmax(850px, 2.5fr) minmax(490px, 1.5fr);
+    }
+
+    @include laptop {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
@@ -12,6 +19,10 @@
     font-size: 44px;
     line-height: calc(54 / 44);
     margin-bottom: 40px;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__address {
@@ -20,5 +31,9 @@
 
   &__total {
     padding: 0;
+
+    @include laptop {
+      order: 2;
+    }
   }
 }

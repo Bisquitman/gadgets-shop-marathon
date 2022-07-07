@@ -25,7 +25,7 @@
   <h1 class="visually-hidden">Techno shop | Онлайн магазин гаджетов | Карточка товара</h1>
 
   <div class="container header__container">
-    <a href="./"><img src="./img/logo.svg" alt="Логотип сайта Techno Shop" class="logo header__logo"></a>
+    <a class="header__logo-link" href="./"><img src="./img/logo.svg" alt="Логотип сайта Techno Shop" class="logo header__logo"></a>
 
     <form class="header__search search">
       <input type="search" class="search__input">
@@ -292,9 +292,13 @@
 <footer class="footer">
   <h2 class="visually-hidden">Подвал сайта</h2>
   <div class="container footer__container">
-    <a href="./"><img src="./img/logo.svg" alt="Логотип сайта Techno Shop" class="logo footer__logo"></a>
+    <a href="./" class="footer__logo-link">
+      <img src="./img/logo.svg"
+           alt="Логотип сайта Techno Shop"
+           class="logo footer__logo">
+    </a>
 
-    <div class="footer__column">
+    <div class="footer__column footer__catalog">
       <h3 class="footer__column-title">Каталог</h3>
       <ul class="footer__list footer__list_double">
         <li class="footer__item"><a href="#" class="footer__link">Смартфоны</a></li>
@@ -309,7 +313,7 @@
       </ul>
     </div>
 
-    <div class="footer__column">
+    <div class="footer__column footer__customer">
       <h3 class="footer__column-title">Покупателям</h3>
       <ul class="footer__list">
         <li class="footer__item"><a href="#" class="footer__link">Оплата заказа</a></li>
@@ -319,13 +323,14 @@
       </ul>
     </div>
 
-    <div class="footer__column">
+    <div class="footer__column footer__contacts">
       <h3 class="footer__column-title">Контакты</h3>
       <ul class="footer__list footer__list_contacts">
-        <li class="footer__item footer__item_contact">Тел: <a href="tel:89149239223" class="footer__link" aria-label="Позвоните нам">8 914
+        <li class="footer__item footer__item_contact">Тел: <a href="tel:89149239223" class="footer__link"
+                                                              aria-label="Позвоните нам">8 914
           923 92 - 23</a></li>
         <li class="footer__item footer__item_contact">Email: <a href="mailto:TechnoSHOP@gmail.com" class="footer__link"
-                                           aria-label="Напишите нам">TechnoSHOP@gmail.com</a></li>
+                                                                aria-label="Напишите нам">TechnoSHOP@gmail.com</a></li>
       </ul>
 
       <ul class="footer__social social">
@@ -359,7 +364,7 @@
 
     </div>
 
-    <div class="footer__copyright">&copy; TechnoSHOP, 2022</div>
+    <p class="footer__copyright">&copy; TechnoSHOP, 2022</p>
     <div class="footer__designedby">
       <p class="copyright__name">Design by Anastasia Ilina</p>
       <p class="copyright__links">Tg: <a href="https://t.me/@Mrshmallowww">@Mrshmallowww</a></p>

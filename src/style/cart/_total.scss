@@ -1,4 +1,9 @@
 .total {
+  @include laptop {
+    width: 494px;
+    justify-self: center;
+  }
+
   &__wrapper {
     padding: 40px 20px;
     border: 1px solid $color-grey;
@@ -45,6 +50,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 17px;
+
+    @include desktop {
+      flex-wrap: wrap;
+      max-width: 352px;
+      margin: 0 auto;
+    }
   }
 
   &__submit {

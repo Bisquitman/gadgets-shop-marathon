@@ -97,15 +97,44 @@ iframe {
 */
 
 .container {
-  $side-padding: 30px;
+  $side-padding: 50px;
   max-width: (1820px + $side-padding * 2);
   padding: 0 $side-padding;
   margin: 0 auto;
+
+  @include desktop {
+    $side-padding: 90px;
+    max-width: (1420px + $side-padding * 2);
+    padding: 0 $side-padding;
+  }
+  @include laptop {
+    $side-padding: 25px;
+    max-width: (970px + $side-padding * 2);
+    padding: 0 $side-padding;
+  }
+  @include tablet {
+    $side-padding: 64px;
+    max-width: (640px + $side-padding * 2);
+    padding: 0 $side-padding;
+  }
+  @include mobile {
+    $side-padding: 10px;
+    max-width: (300px + $side-padding * 2);
+    padding: 0 $side-padding;
+  }
 }
 
 .main {
   padding-top: 44px;
   padding-bottom: 120px;
+
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+  @include mobile {
+    padding-top: 35px;
+  }
 }
 
 /*
