@@ -23,7 +23,8 @@
       "copyright . . designedby";
 
     @include laptop {
-      grid-template-columns: 395px 235px 280px;
+      grid-template-columns: 385px 235px 280px;
+      column-gap: 30px;
       grid-template-areas:
         "logo . ."
         "catalog customer contacts"

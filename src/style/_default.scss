@@ -67,11 +67,11 @@ fieldset {
 
 label {
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
-
-  &:hover {
-    color: $color-main;
-  }
+  //transition: color 0.2s ease-in-out;
+  //
+  //&:hover {
+  //  color: $color-main;
+  //}
 }
 
 iframe {
@@ -118,9 +118,8 @@ iframe {
     padding: 0 $side-padding;
   }
   @include mobile {
-    $side-padding: 10px;
-    max-width: (300px + $side-padding * 2);
-    padding: 0 $side-padding;
+    width: 90%;
+    padding: 0;
   }
 }
 
