@@ -1,4 +1,6 @@
 .card {
+  position: relative;
+  min-height: 80vh;
   //margin-bottom: 70px;
 
   &__details {
@@ -159,5 +161,15 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 140%;
+  }
+
+  &__preloader {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    background-color: $color-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

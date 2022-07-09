@@ -40,7 +40,10 @@ const pagination = (wrapper, pages, page, count) => {
       }
     }
 
-    const li = createPaginationItem(`index.html?page=${n}`, n, page === n);
+    const url = new URL(location);
+    url.searchParams.set('page', n);
+
+    const li = createPaginationItem(url, n, page === n);
     paginationList.append(li);
   }
 

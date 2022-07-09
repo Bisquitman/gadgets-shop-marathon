@@ -34,3 +34,10 @@ $mobile: 560px;
     @content
   }
 }
+
+/* Animation */
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

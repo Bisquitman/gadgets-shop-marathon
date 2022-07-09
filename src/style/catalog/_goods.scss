@@ -16,14 +16,17 @@
       gap: 10px;
     }
   }
-  // Preloader
-  /* Animation */
-  @keyframes rotate {
-    to {
-      transform: rotate(360deg);
+
+  &__item {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 6%);
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 14px 30px -15px rgb(0 0 0 / 75%);
     }
   }
 
+  // Preloader
   /* Variables */
   $loader-size: 128px;
 

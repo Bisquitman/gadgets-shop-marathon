@@ -44,6 +44,24 @@
     }
   }
 
+  &__label-select {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      right: 30px;
+      top: 50%;
+      transform: translateY(calc(-50% - 2px)) rotate(45deg);
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-color: transparent $color-primary $color-primary transparent;
+      border-width: 2px;
+      border-style: solid;
+    }
+  }
+
   &__input {
     width: 165px;
     padding-left: 10px;
@@ -56,6 +74,9 @@
     }
 
     &_select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
       width: 100%;
       color: $color-grey;
     }

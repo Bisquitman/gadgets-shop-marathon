@@ -8,13 +8,8 @@
   gap: 10px;
   font-size: 22px;
   line-height: calc(27 / 22);
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 6%);
-  transition: box-shadow 0.3s;
-  padding: 20px;
-
-  &:hover {
-    box-shadow: 0 14px 30px -15px rgb(0 0 0 / 75%);
-  }
+  padding: 15px;
+  box-sizing: border-box;
 
   @include laptop {
     min-height: 420px;

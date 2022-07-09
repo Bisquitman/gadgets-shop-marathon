@@ -17,6 +17,10 @@
   <meta name="msapplication-config" content="./img/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
+  <link rel="preload" href="assets/fonts/montserrat-500.woff2" type="font/woff2" as="font" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-700.woff2" type="font/woff2" as="font" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-400.woff2" type="font/woff2" as="font" crossorigin>
+
   <title>Techno shop | Онлайн магазин гаджетов</title>
 </head>
 
@@ -27,8 +31,8 @@
   <div class="container header__container">
     <a class="header__logo-link" href="./"><img src="./img/logo.svg" alt="Логотип сайта Techno Shop" class="logo header__logo"></a>
 
-    <form class="header__search search">
-      <input type="search" class="search__input">
+    <form action="/" class="header__search search">
+      <input type="search" class="search__input" name="search">
 
       <button class="search__button" aria-label="Поиск по сайту">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -75,21 +79,30 @@
               <fieldset class="filter__field">
                 <legend class="filter__field-title">Цена</legend>
                 <div class="filter__flex">
-                  <label><input type="number" name="price-from" placeholder="от" class="filter__input"></label>
-                  <label><input type="number" name="price-to" placeholder="до" class="filter__input"></label>
+                  <label>
+                    <input
+                      type="number"
+                      name="minprice"
+                      step="any"
+                      placeholder="от"
+                      class="filter__input">
+                  </label>
+                  <label>
+                    <input
+                      type="number"
+                      name="maxprice"
+                      step="any"
+                      placeholder="до"
+                      class="filter__input">
+                  </label>
                 </div>
               </fieldset>
 
               <fieldset class="filter__field">
                 <legend class="filter__field-title">Категория</legend>
-                <label>
-                  <select class="filter__input filter__input_select" name="category">
-                    <option value="all" selected>Все категории</option>
-                    <option value="phones">Смартфоны</option>
-                    <option value="pads">Планшеты</option>
-                    <option value="watches">Умные часы</option>
-                    <option value="monoblocks">Моноблоки</option>
-                    <option value="notebooks">Ноутбуки</option>
+                <label class="filter__label-select">
+                  <select class="filter__input filter__input_select" id="category" name="category">
+                    <option value="" selected>Все категории</option>
                   </select>
                 </label>
               </fieldset>
@@ -97,8 +110,22 @@
               <fieldset class="filter__field">
                 <legend class="filter__field-title">Диагональ</legend>
                 <div class="filter__flex">
-                  <label><input type="number" name="diagonal-from" placeholder="от" class="filter__input"></label>
-                  <label><input type="number" name="diagonal-to" placeholder="до" class="filter__input"></label>
+                  <label>
+                    <input
+                      type="number"
+                      name="mindisplay"
+                      step="any"
+                      placeholder="от"
+                      class="filter__input">
+                  </label>
+                  <label>
+                    <input
+                      type="number"
+                      name="maxdisplay"
+                      step="any"
+                      placeholder="до"
+                      class="filter__input">
+                  </label>
                 </div>
               </fieldset>
 
