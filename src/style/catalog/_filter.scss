@@ -4,6 +4,23 @@
 
   @include tablet {
     display: none;
+    position: absolute;
+    background-color: $color-secondary;
+    top: 0;
+    right: 44px;
+    z-index: 555;
+    padding: 14px 20px 26px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+
+    &_show {
+      display: block;
+    }
+  }
+
+  @include mobile {
+    padding: 10px 10px 15px;
+    right: -10px;
+    max-width: 320px;
   }
 
   &__title {
@@ -11,6 +28,32 @@
     font-size: 26px;
     line-height: calc(32 / 26);
     margin-bottom: 30px;
+
+    @include tablet {
+      font-size: 22px;
+      line-height: calc(27 / 22);
+      margin-bottom: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px;
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-image: url('img/arrow-down.svg');
+        transform: rotate(180deg);
+      }
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: calc(17 / 14);
+    }
   }
 
   &__form {
@@ -18,11 +61,23 @@
   }
 
   &__fields-list {
+    font-size: 16px;
+    line-height: calc(20 / 16);
     margin-bottom: 40px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: calc(17 / 14);
+      margin-bottom: 30px;
+    }
   }
 
   &__field {
     margin-bottom: 30px;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
   }
 
   &__field-title {
@@ -30,6 +85,11 @@
     font-size: 20px;
     line-height: calc(24 / 20);
     margin-bottom: 10px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: calc(20 / 16);
+    }
   }
 
   &__flex {
@@ -59,6 +119,10 @@
       border-color: transparent $color-primary $color-primary transparent;
       border-width: 2px;
       border-style: solid;
+
+      @include laptop {
+        right: 20px;
+      }
     }
   }
 
@@ -79,6 +143,10 @@
       appearance: none;
       width: 100%;
       color: $color-grey;
+
+      @include laptop {
+        width: 100%;
+      }
     }
 
     &::placeholder {
@@ -108,11 +176,17 @@
     &:hover {
       background-color: $color-main;
     }
+
     &:active {
       background-color: $color-main-sub;
     }
+
     &:disabled {
       background-color: $color-grey-light;
+    }
+
+    @include tablet {
+      margin-bottom: 15px;
     }
   }
 
@@ -130,6 +204,12 @@
 
     &:hover {
       color: $color-main;
+    }
+
+    @include tablet {
+      position: static;
+      display: block;
+      margin: 0 auto;
     }
   }
 }

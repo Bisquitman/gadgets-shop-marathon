@@ -10,6 +10,20 @@ const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
+const plugins = [
+  ...PAGES.map(page => new HtmlWebpackPlugin({
+    template: path.resolve(__dirname, 'src', `${page}.html`),
+    filename: `${page}.html`,
+  })),
+  new MiniCssExtractPlugin({
+    filename: 'css/style.[contenthash].css',
+  }),
+];
+
+if (!devMode) {
+  plugins.push(new Critical());
+}
+
   module.exports = {
     mode,
     target,
@@ -26,16 +40,7 @@ const devtool = devMode ? 'source-map' : undefined;
       filename: 'js/index.[contenthash].js',
       assetModuleFilename: "assets/[name][ext]",
     },
-    plugins: [
-      ...PAGES.map(page => new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src', `${page}.html`),
-        filename: `${page}.html`,
-      })),
-      new MiniCssExtractPlugin({
-        filename: 'css/style.[contenthash].css',
-      }),
-      new Critical(),
-    ],
+    plugins,
     module: {
       rules: [
         {

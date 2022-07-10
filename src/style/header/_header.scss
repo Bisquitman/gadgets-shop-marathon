@@ -84,4 +84,25 @@
       line-height: calc(17 / 14);
     }
   }
+
+  &__cart {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      right: -8px;
+      bottom: -8px;
+      content: attr(data-count);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: $color-main;
+      width: 22px;
+      height: 22px;
+    }
+  }
 }

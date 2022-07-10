@@ -1,9 +1,18 @@
 .catalog {
+  &__container {
+    position: relative;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 44px;
     line-height: calc(54 / 44);
     margin-bottom: 10px;
+
+    @include mobile {
+      font-size: 30px;
+      line-height: calc(37 / 30);
+    }
   }
 
   &__wrapper {
@@ -39,6 +48,38 @@
 
     @include tablet {
       grid-column: auto;
+    }
+  }
+
+  &__filter-btn {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 16px;
+      right: 64px;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: calc(27 / 22);
+      background-color: transparent;
+      border: none;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-image: url('img/arrow-down.svg');
+      }
+
+      @include mobile {
+        font-size: 14px;
+        top: 11px;
+        right: 0;
+      }
     }
   }
 }

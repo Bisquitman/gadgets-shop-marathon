@@ -74,6 +74,11 @@
       line-height: calc(15 / 12);
     }
 
+    &_remove {
+      color: $color-secondary;
+      background-color: $color-primary;
+    }
+
     &:hover {
       background-color: $color-main;
       border-color: $color-main;
