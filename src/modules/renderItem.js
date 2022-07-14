@@ -1,5 +1,7 @@
 import {API_URI} from "./var";
 import Swiper, {Scrollbar, Thumbs} from "swiper";
+import 'swiper/css';
+import 'swiper/css/scrollbar';
 
 const createCardImageSlider = (largeImages) => {
   const ul = document.createElement('ul');
@@ -100,13 +102,24 @@ export const renderItem = (item) => {
 
   // init Swipers:
   const thumbSwiper = new Swiper(cardSliderThumb, {
-    spaceBetween: 44,
+    spaceBetween: 15,
     slidesPerView: 3,
     scrollbar: {
       el: swiperScrollbar,
       draggable: true,
     },
     modules: [Scrollbar],
+    breakpoints: {
+      768: {
+        spaceBetween: 20,
+      },
+      1024: {
+        spaceBetween: 27,
+      },
+      1600: {
+        spaceBetween: 44,
+      },
+    },
   });
 
   new Swiper(cardImage, {

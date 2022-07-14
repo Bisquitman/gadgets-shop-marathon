@@ -4,6 +4,15 @@
     font-size: 44px;
     line-height: calc(54 / 44);
     margin-bottom: 10px;
+
+    @include laptop {
+      font-size: 30px;
+      line-height: calc(37 / 30);
+    }
+    @include mobile {
+      font-size: 20px;
+      line-height: calc(24 / 20);
+    }
   }
 
   &__carousel {
@@ -15,10 +24,14 @@
   &__item {
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 6%);
     transition: box-shadow 0.3s;
-    height: unset !important;
+    //height: unset;
 
     &:hover {
       box-shadow: 0 14px 30px -15px rgb(0 0 0 / 75%);
     }
+  }
+
+  .swiper-slide {
+    height: unset;
   }
 }

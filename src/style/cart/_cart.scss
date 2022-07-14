@@ -1,4 +1,6 @@
 .cart {
+  position: relative;
+
   &__wrapper {
     display: grid;
     //grid-template-columns: minmax(990px, 3fr) minmax(710px, 2fr);
