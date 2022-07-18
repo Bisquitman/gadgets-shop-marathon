@@ -57,8 +57,7 @@ export const cartControl = ({wrapper, classAdd, classDelete, classCount} = {}) =
   checkItems({classDelete, classAdd, classCount});
 
   if (wrapper && classAdd && classDelete) {
-    wrapper.addEventListener('click', (e) => {
-      const target = e.target;
+    wrapper.addEventListener('click', ({target}) => {
       const id = target.dataset.idGoods;
 
       if (!id) return;
@@ -89,6 +88,9 @@ export const cartControl = ({wrapper, classAdd, classDelete, classCount} = {}) =
 export const renderCart = (goods, cartGoods) => {
   const cartGoodsList = document.querySelector('.cart-goods__list');
   cartGoodsList.textContent = '';
+  const priceOutput = document.querySelectorAll('.total__row_grey > span');
+  const totalPriceOutput = document.querySelectorAll('.total__row_header > span');
+  let totalPrice = 0;
 
   goods.forEach(item => {
     const li = document.createElement('li');
@@ -130,14 +132,20 @@ export const renderCart = (goods, cartGoods) => {
     inc.className = "card__btn item__btn_inc";
     inc.textContent = '+';
 
-
     const price = document.createElement('p');
     price.className = "item__price";
     price.textContent = new Intl.NumberFormat('ru-RU', {
       style: 'currency',
       currency: 'RUB',
       maximumFractionDigits: 0,
-    }).format(item.price * quantity.value);
+    }).format(item.price * cartGoods[item.id]);
+
+    totalPrice += item.price * cartGoods[item.id];
+    priceOutput[1].textContent = new Intl.NumberFormat('ru-RU', {
+      style: 'currency',
+      currency: 'RUB',
+      maximumFractionDigits: 0,
+    }).format(totalPrice);
 
     const removeBtn = document.createElement('button');
     removeBtn.className = "item__remove";

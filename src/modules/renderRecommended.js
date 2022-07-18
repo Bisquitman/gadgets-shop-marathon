@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import {cartControl} from "./cartControl";
 
 export const renderRecommended = (recommended, data, id) => {
-  const goods = data.goods.filter(item => item.id !== id);
+  const goods = data.goods.filter(item => +item.id !== id);
 
   if (goods.length) {
     const container = document.createElement('div');

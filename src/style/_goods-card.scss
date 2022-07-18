@@ -82,8 +82,8 @@
     }
 
     &_remove {
-      color: $color-secondary;
-      background-color: $color-primary;
+      color: $color-secondary !important;
+      background-color: $color-primary !important;
     }
 
     &:hover {

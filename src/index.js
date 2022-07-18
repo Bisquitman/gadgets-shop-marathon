@@ -106,7 +106,7 @@ try {
       {};
 
     const list = Object.keys(cartGoods);
-    console.log(list);
+    // console.log(list);
 
     if (list.length) {
       const preloader = document.createElement('div');

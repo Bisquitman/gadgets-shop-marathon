@@ -88,7 +88,7 @@
   &__cart {
     position: relative;
 
-    &:after {
+    &::after {
       position: absolute;
       right: -8px;
       bottom: -8px;
